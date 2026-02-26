@@ -67,7 +67,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="font-body text-lg sm:text-xl md:text-2xl text-[#F7F5F3]/70 max-w-3xl mx-auto mb-10 sm:mb-12 leading-relaxed font-light"
         >
-          I help companies dismantle operational bottlenecks through strategic automation and practical AI — so your team focuses on decisions, not repetition.
+          What would change if the day-to-day simply took care of itself?
         </motion.p>
 
         {/* CTA Buttons */}
