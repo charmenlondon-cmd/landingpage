@@ -25,15 +25,24 @@ export default function LeadMagnetSection() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim()) {
       toast.error("Please fill in both fields.");
       return;
     }
-    // In a real implementation, this would send to an email service
-    setSubmitted(true);
-    toast.success("Thank you! Check your inbox for the guide.");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+      if (!res.ok) throw new Error("Subscription failed");
+      setSubmitted(true);
+      toast.success("Thank you! Check your inbox for the guide.");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (
