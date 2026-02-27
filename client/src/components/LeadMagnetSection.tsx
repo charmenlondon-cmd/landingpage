@@ -39,7 +39,7 @@ export default function LeadMagnetSection() {
       });
       if (!res.ok) throw new Error("Subscription failed");
       setSubmitted(true);
-      toast.success("Thank you! Check your inbox for the guide.");
+      toast.success("Thank you. Check your inbox and start saving hours in your week.");
     } catch {
       toast.error("Something went wrong. Please try again.");
     }
@@ -221,8 +221,7 @@ export default function LeadMagnetSection() {
                     You're In!
                   </h3>
                   <p className="font-body text-[#F7F5F3]/60">
-                    Check your inbox for your copy of "5 Practical Automations You Can Set Up Right
-                    Now."
+                    Check your inbox and start saving hours in your week.
                   </p>
                 </div>
               )}
