@@ -218,7 +218,7 @@ export default function LeadMagnetSection() {
                 <div className="text-center py-8">
                   <CheckCircle className="w-12 h-12 text-[#C87941] mx-auto mb-4" />
                   <h3 className="font-display text-2xl font-semibold text-[#F7F5F3] mb-2">
-                    You're In!
+                    Thank You!
                   </h3>
                   <p className="font-body text-[#F7F5F3]/60">
                     Check your inbox and start saving hours in your week.
